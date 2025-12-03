@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3; url="https://github.com/sbibeev06-LOVERWWW/LOVEALLTHEWORLD-.git">
+    <title>❤️ Твой Tokyo Ghoul ждёт!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a0b2e, #4a1e6e, #8b008b);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 2rem;
+            color: #ff0066;
+            animation: fall 8s linear infinite;
+            opacity: 0.7;
+        }
+        
+        @keyframes fall {
+            0% {
+                top: -10%;
+                transform: rotate(0deg);
+                opacity: 0.8;
+            }
+            100% {
+                top: 110%;
+                transform: rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .container {
+            background: rgba(255, 20, 147, 0.15);
+            backdrop-filter: blur(15px);
+            border: 4px solid #ff1493;
+            border-radius: 40px;
+            padding: 60px 40px;
+            max-width: 800px;
+            box-shadow: 0 0 60px rgba(255, 20, 147, 0.6),
+                        0 0 120px rgba(255, 105, 180, 0.4);
+            z-index: 10;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 0, 100, 0.2) 0%, transparent 70%);
+            z-index: -1;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: #ff66b2;
+            text-shadow: 0 0 25px #ff0066,
+                         0 0 40px #ff1493;
+            line-height: 1.3;
+            letter-spacing: 2px;
+        }
+        
+        .link-box {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid #ffcc00;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            word-break: break-all;
+            font-size: 1.2rem;
+        }
+        
+        .link-box a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .link-box a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+        
+        .button {
+            background: linear-gradient(135deg, #ff0066, #ff1493, #8b008b);
+            color: white;
+            border: none;
+            padding: 25px 60px;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.4s;
+            box-shadow: 0 10px 35px rgba(255, 0, 102, 0.7),
+                        0 0 40px rgba(255, 20, 147, 0.5);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 45px rgba(255, 0, 102, 0.9),
+                        0 0 60px rgba(255, 20, 147, 0.8);
+            background: linear-gradient(135deg, #ff1493, #ff0066, #ff1493);
+        }
+        
+        .button:active {
+            transform: scale(0.98);
+        }
+        
+        .button::after {
+            content: '👹';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.3); }
+        }
+        
+        .countdown {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            color: #ffccff;
+            background: rgba(255, 105, 180, 0.3);
+            padding: 15px 30px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        
+        .countdown span {
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 2rem;
+            text-shadow: 0 0 15px #ffcc00;
+        }
+        
+        .ghoul-icon {
+            color: #ff0066;
+            font-size: 4rem;
+            margin: 20px;
+            animation: spin 4s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Секретная пасхалка */
+        .easter-egg {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.8rem;
+            z-index: 1000;
+            border: 2px solid transparent;
+        }
+        
+        .easter-egg:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: #ffcc00;
+            transform: scale(1.2) rotate(15deg);
+        }
+        
+        .easter-egg .tooltip {
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            width: 200px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            border: 1px solid #ffcc00;
+        }
+        
+        .easter-egg:hover .tooltip {
+            opacity: 1;
+        }
+        
+        .secret-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .secret-content {
+            background: linear-gradient(135deg, #1a0b2e, #8b008b);
+            padding: 40px;
+            border-radius: 30px;
+            border: 4px solid #ffcc00;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 0 80px rgba(255, 204, 0, 0.7);
+        }
+        
+        .secret-content h2 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        .secret-content p {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            color: #ccccff;
+        }
+        
+        .secret-btn {
+            background: linear-gradient(135deg, #ff0066, #ffcc00);
+            color: black;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .secret-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(255, 204, 0, 0.8);
+        }
+        
+        .footer {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #ff99cc;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div id="hearts"></div>
+    
+    <div class="container">
+        <div class="ghoul-icon">👹</div>
+        
+        <h1>
+            ТВОЙ TOKYO GHOUL<br>
+            <span style="color:#00ffcc">ЖДЁТ ТЕБЯ!</span>
+        </h1>
+        
+        <div class="link-box">
+            🔗 Прямая ссылка: 
+            <a href="https://github.com/sbibeev06-LOVERWWW/LOVEALLTHEWORLD-.git" target="_blank">
+                https://github.com/sbibeev06-LOVERWWW/LOVEALLTHEWORLD-.git
+            </a>
+        </div>
+        
+        <button class="button" onclick="window.open('https://github.com/sbibeev06-LOVERWWW/LOVEALLTHEWORLD-.git', '_blank')">
+            ПЕРЕЙТИ СЕЙЧАС!
+        </button>
+        
+        <div class="countdown">
+            Автопереход через <span id="timer">3</span> сек...
+        </div>
+        
+        <div class="footer">
+            ⚠️ Осторожно: сайт содержит тёмную эстетику и страсть!
+        </div>
+    </div>
+    
+    <!-- ПАСХАЛКА -->
+    <div class="easter-egg" onclick="showSecret()">
+        🎵
+        <div class="tooltip">
+            Кликни, если хочешь услышать моё любимое...
+        </div>
+    </div>
+    
+    <div id="secretModal" class="secret-modal">
+        <div class="secret-content">
+            <h2>🎵 Тайная мелодия 🎵</h2>
+            <p>Этот трек — часть моей души. <br>Слушай его, когда тебе одиноко...</p>
+            <div class="link-box" style="margin: 20px auto;">
+                <a href="https://www.youtube.com/watch?v=Ho3GLleK2xA&list=RDMM&index=7" target="_blank">
+                    https://www.youtube.com/watch?v=Ho3GLleK2xA
+                </a>
+            </div>
+            <button class="secret-btn" onclick="playSecret()">▶️ Включить сейчас</button>
+            <button class="secret-btn" onclick="closeSecret()" style="background: linear-gradient(135deg, #666, #333); margin-left: 10px;">✖️ Закрыть</button>
+        </div>
+    </div>
+    
+    <script>
+        for (let i = 0; i < 30; i++) {
+            let heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+            document.getElementById('hearts').appendChild(heart);
+        }
+        
+        let time = 3;
+        const timerElement = document.getElementById('timer');
+        const countdown = setInterval(() => {
+            time--;
+            timerElement.textContent = time;
+            if (time <= 0) {
+                clearInterval(countdown);
+                window.location.href = "https://github.com/sbibeev06-LOVERWWW/LOVEALLTHEWORLD-.git";
+            }
+        }, 1000);
+        
+        const button = document.querySelector('.button');
+        button.addEventListener('mouseenter', () => {
+            button.style.background = 'linear-gradient(135deg, #ff1493, #ff0066, #ff1493)';
+        });
+        button.addEventListener('mouseleave', () => {
+            button.style.background = 'linear-gradient(135deg, #ff0066, #ff1493, #8b008b)';
+        });
+        
+        // Функции для пасхалки
+        function showSecret() {
+            document.getElementById('secretModal').style.display = 'flex';
+        }
+        
+        function closeSecret() {
+            document.getElementById('secretModal').style.display = 'none';
+        }
+        
+        function playSecret() {
+            window.open('https://www.youtube.com/watch?v=Ho3GLleK2xA&list=RDMM&index=7', '_blank');
+            // Автовоспроизведение (может не работать из-за политики браузеров)
+            // const audio = new Audio('https://www.youtube.com/watch?v=Ho3GLleK2xA');
+            // audio.play().catch(e => console.log('Автовоспроизведение заблокировано'));
+        }
+        
+        // Закрыть пасхалку по ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeSecret();
+        });
+        
+        // Случайное мерцание пасхалки
+        setInterval(() => {
+            const egg = document.querySelector('.easter-egg');
+            if (Math.random() > 0.7) {
+                egg.style.boxShadow = '0 0 20px #ffcc00';
+                setTimeout(() => {
+                    egg.style.boxShadow = 'none';
+                }, 300);
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
